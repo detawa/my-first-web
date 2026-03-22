@@ -1,0 +1,62 @@
+/* style.css */
+
+/* 1. ตั้งค่าพื้นหลังและตัวอักษรทั้งหน้าจอ */
+body {
+    background-color: #121212; /* สีดำเข้มเกือบสนิท */
+    color: #e0e0e0; /* สีขาวนวล (อ่านง่ายกว่าขาวจั๊วะ) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ฟอนต์ที่ดูทันสมัย */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ให้เนื้อหาอยู่กลางจอพอดี */
+    margin: 0;
+}
+
+/* 2. ตกแต่งกล่องข้อความหลัก */
+.container {
+    background-color: #1e1e1e; /* สีเทาเข้มกว่าพื้นหลังนิดหน่อย */
+    padding: 2rem;
+    border-radius: 15px; /* ทำมุมโค้งมน */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* ใส่เงาให้ดูมีมิติ */
+    border: 2px solid #ff4b2b; /* เส้นขอบสีแดง-ส้ม เท่ๆ */
+    text-align: center;
+    max-width: 400px;
+}
+
+/* 3. ตกแต่งหัวข้อและรายการ */
+h1 {
+    color: #ff4b2b; /* หัวข้อสีแดง */
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none; /* เอาจุดหน้าหลักออก */
+    padding: 0;
+    text-align: left; /* ให้รายการชิดซ้าย */
+    display: inline-block; /* เพื่อให้ text-align: left ทำงานกลางกล่อง */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li::before {
+    content: "⚡ "; /* ใส่ไอคอนหน้าหลัก */
+}
+
+/* 4. ตกแต่งปุ่ม */
+button {
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s; /* ใส่เอฟเฟกต์ตอนเอาเมาส์ชี้ */
+}
+
+button:hover {
+    background-color: #e03e1f; /* สีเข้มขึ้นตอนเอาเมาส์ชี้ */
+}

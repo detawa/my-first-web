@@ -14,13 +14,12 @@ body {
 
 /* 2. ตกแต่งกล่องข้อความหลัก */
 .container {
-    background-color: #1e1e1e; /* สีเทาเข้มกว่าพื้นหลังนิดหน่อย */
-    padding: 2rem;
-    border-radius: 15px; /* ทำมุมโค้งมน */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* ใส่เงาให้ดูมีมิติ */
-    border: 2px solid #ff4b2b; /* เส้นขอบสีแดง-ส้ม เท่ๆ */
-    text-align: center;
-    max-width: 400px;
+    max-width: 600px;         /* จำกัดความกว้างไม่ให้ล้นจอ Surface */
+    margin: 40px auto;       /* วางไว้ตรงกลางหน้าจอพอดี */
+    padding: 20px;
+    background-color: #1e1e1e; /* สีเทาเข้มแบบ VS Code */
+    border-radius: 15px;      /* มุมโค้งมนแบบ iPadOS */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* เพิ่มมิติ */
 }
 
 /* 3. ตกแต่งหัวข้อและรายการ */
@@ -30,14 +29,18 @@ h1 {
 }
 
 ul {
-    list-style-type: none; /* เอาจุดหน้าหลักออก */
+    display: flex;           /* เปิดใช้งาน Flexbox */
+    flex-direction: column;  /* เรียงจากบนลงล่าง */
+    gap: 10px;               /* ระยะห่างระหว่างรายการ */
     padding: 0;
-    text-align: left; /* ให้รายการชิดซ้าย */
-    display: inline-block; /* เพื่อให้ text-align: left ทำงานกลางกล่อง */
+    list-style: none;        /* เอาจุดกลมๆ ออก */
 }
 
 li {
-    margin-bottom: 10px;
+    background: #2d2d2d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff4b2b; /* เส้นสีแดงเท่ๆ ตามสไตล์ที่คุณชอบ */
 }
 
 li::before {
